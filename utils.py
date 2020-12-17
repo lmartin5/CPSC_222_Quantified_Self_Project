@@ -1,7 +1,23 @@
+'''
+Programmer: Luke Martin
+Class: CPSC 222-01, Fall 2020
+Quantified Self Project utils file
+9/27/2020
+
+Description: This file contains the functions used in my Technical Report.
+It includes the two main visualization functions.
+'''
+
 import matplotlib.pyplot as plt
 import numpy as np
 
 def create_histogram(x, title, x_label):
+    '''
+    Paramter x: the data to be charted
+    Parameter title: the title of the histogram
+    Parameter x_label: the x-label of the histogram
+    Returns: the histogram is plotted and shown in the notebook
+    '''
     x_mean = np.mean(x)
     plt.figure()
     # return tuple of plt.hist in matplotlib documentation
@@ -15,9 +31,14 @@ def create_histogram(x, title, x_label):
     plt.close()
 
 def create_box_plot(x, label):
+    '''
+    Paramter x: the data to be charted
+    Parameter label: the label of the data that will be used on x-label and title
+    Returns: the histogram is plotted and shown in the notebook
+    '''
     plt.figure()
-    plt.boxplot(x, vert=False)
-    plt.yticks([])
+    plt.boxplot(x, vert=False) # makes the plot horizontal
+    plt.yticks([]) # removes y ticks on side
     plt.title("Box and Whisker Plot for " + label)
     plt.xlabel(label)
     plt.show()
