@@ -13,6 +13,7 @@ import numpy as np
 
 def create_histogram(x, title, x_label):
     '''
+    Creates a histogram with the mean displayed, used in CPSC 222 Project
     Paramter x: the data to be charted
     Parameter title: the title of the histogram
     Parameter x_label: the x-label of the histogram
@@ -32,14 +33,15 @@ def create_histogram(x, title, x_label):
 
 def create_box_plot(x, label):
     '''
+    Creates a box and whisker plot, used in CPSC 222 Project
     Paramter x: the data to be charted
     Parameter label: the label of the data that will be used on x-label and title
-    Returns: the histogram is plotted and shown in the notebook
+    Returns: the box and whisker plot is plotted and shown in the notebook
     '''
     plt.figure()
     plt.boxplot(x, vert=False) # makes the plot horizontal
     plt.yticks([]) # removes y ticks on side
-    plt.title("Box and Whisker Plot for " + label)
+    plt.title("Box Plot for " + label)
     plt.xlabel(label)
     plt.show()
     plt.close()
